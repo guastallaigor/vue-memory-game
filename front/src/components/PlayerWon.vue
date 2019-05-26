@@ -11,6 +11,8 @@ export default ({ props }) => (
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/responsive.scss";
+
 .player-won {
   @keyframes text-animation {
     0% {
@@ -32,10 +34,19 @@ export default ({ props }) => (
   span {
     &:first-child {
       font-size: 10em;
+
+      @include sm-and-down() {
+        text-align: center;
+        font-size: 7em;
+      }
     }
 
     &:last-child {
       font-size: 2em;
+
+      @include sm-and-down() {
+        text-align: center;
+      }
     }
   }
 
