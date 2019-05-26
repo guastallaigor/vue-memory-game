@@ -1,7 +1,7 @@
 <script>
 export default ({ props }) => (
   <div class="card">
-    <div class="card-flip-inner"
+    <div class="inside"
       onClick={() => props.handleTurn(props.cardIndex)}
       style={
         props.isTurned && !props.isOtherWay
@@ -11,10 +11,10 @@ export default ({ props }) => (
             : {}
       }
     >
-      <div class="card-flip-front">
+      <div class="front">
         <VLazyImage src={require('@/assets/img/back-card.jpg')} alt="Back of the card"/>
       </div>
-      <div class="card-flip-back">
+      <div class="back">
         <VLazyImage src={props.imageUrl} alt="Front of the card"/>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default ({ props }) => (
   cursor: pointer;
   perspective: 1000px;
 
-  .card-flip-inner {
+  .inside {
     position: relative;
     width: 100%;
     height: 100%;
@@ -53,11 +53,11 @@ export default ({ props }) => (
       height: 371px;
     }
 
-    .card-flip-front {
+    .front {
       @include set-card-flip-both();
     }
 
-    .card-flip-back {
+    .back {
       @include set-card-flip-both();
 
       transform: rotateY(180deg);

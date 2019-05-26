@@ -7,7 +7,7 @@ export default ({ props }) => (
     <div class="modal-overlay" onClick={() => props.close()}></div>
     <div class="modal-content">
       <span onClick={() => props.close()}>X</span>
-      <h1>Ranks</h1>
+      <h1>Rank</h1>
       <table>
         <thead>
           <tr>
