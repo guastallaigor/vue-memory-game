@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 module.exports = {
   async index(req, res) {
-    const users = await User.find({}).sort('-moves');
+    const users = await User.find({}).sort('moves');
 
     return res.json(users);
   },
@@ -21,7 +21,7 @@ module.exports = {
         user = await User.create(body);
       }
 
-      const users = await User.find({}).sort('-moves');
+      const users = await User.find({}).sort('moves');
 
       req.io.emit('usersEmit', users);
 
