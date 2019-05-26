@@ -127,7 +127,7 @@ POST | /users | Salva um novo usuário
 
 ### Jest
 
-Este projeto contém alguns testes com Jest. Execute o comando `npm run test:unit`, dentro da pasta front
+Este projeto contém 1 teste básico com Jest apenas. Execute o comando `npm run test:unit`, dentro da pasta front
 
 #### Cypress (E2E)
 
